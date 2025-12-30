@@ -195,67 +195,45 @@
             }
         }
 
-        /* Small Phones (480px and below) */
-        @media (max-width: 480px) {
-            .buy-hero {
-                padding: 60px 15px 30px;
-            }
+        /* Center cards on tiny screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .properties-grid {
+        grid-template-columns: 1fr; /* Force single column */
+        max-width: 380px;        /* Limit width for better centering */
+        margin: 0 auto;          /* Center the grid itself */
+        padding: 0 15px;
+        gap: 25px;
+    }
 
-            .buy-hero h1 {
-                font-size: 2rem;
-            }
+    .property-card {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto; /* Extra safety: center each card */
+        border-radius: 14px;
+    }
 
-            .buy-hero p {
-                font-size: 1rem;
-            }
+    .property-img {
+        height: 200px;
+        border-radius: 14px 14px 0 0;
+    }
 
-            .filters {
-                padding: 0 15px;
-                gap: 10px;
-            }
+    .property-info {
+        padding: 18px 16px;
+    }
 
-            .filters select,
-            .filters input {
-                padding: 12px;
-                font-size: 0.95rem;
-            }
+    .property-info h3 {
+        font-size: 1.35rem;
+    }
 
-            .filters button {
-                padding: 12px;
-                font-size: 1rem;
-            }
+    .price {
+        font-size: 1.5rem;
+    }
 
-            .properties-grid {
-                padding: 0 15px;
-                gap: 25px;
-            }
-
-            .property-img {
-                height: 200px;
-            }
-
-            .property-info {
-                padding: 18px;
-            }
-
-            .property-info h3 {
-                font-size: 1.3rem;
-            }
-
-            .price {
-                font-size: 1.4rem;
-            }
-
-            .features {
-                font-size: 0.9rem;
-                gap: 12px;
-            }
-
-            .view-btn {
-                padding: 12px;
-                font-size: 1rem;
-            }
-        }
+    .view-btn {
+        padding: 13px;
+        font-size: 1rem;
+    }
+}
 
         /* Large Desktop (1200px+) */
         @media (min-width: 1200px) {
